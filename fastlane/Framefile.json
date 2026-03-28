@@ -1,0 +1,74 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "keyword": {
+      "font": "./fastlane/fonts/SF-Pro-Display-Bold.otf",
+      "color": "#FF6B5B"
+    },
+    "title": {
+      "font": "./fastlane/fonts/SF-Pro-Display-Heavy.otf",
+      "color": "#FFFFFF"
+    },
+    "background": "#1C1C1E",
+    "padding": 50,
+    "show_complete_frame": false,
+    "stack_title": true,
+    "title_below_image": false
+  },
+  "data": [
+    {
+      "filter": "1_splash",
+      "keyword": {
+        "text": "IT SCREAMS BACK"
+      },
+      "title": {
+        "text": "SlapPhone"
+      }
+    },
+    {
+      "filter": "2_home",
+      "keyword": {
+        "text": "SLAP IT"
+      },
+      "title": {
+        "text": "Impact Detection"
+      }
+    },
+    {
+      "filter": "3_voicepacks",
+      "keyword": {
+        "text": "4 VOICE PACKS"
+      },
+      "title": {
+        "text": "Choose Your Reaction"
+      }
+    },
+    {
+      "filter": "4_settings",
+      "keyword": {
+        "text": "CUSTOMIZE"
+      },
+      "title": {
+        "text": "Adjust Sensitivity"
+      }
+    },
+    {
+      "filter": "5_stats",
+      "keyword": {
+        "text": "TRACK IT ALL"
+      },
+      "title": {
+        "text": "Lifetime Statistics"
+      }
+    },
+    {
+      "filter": "6_impact",
+      "keyword": {
+        "text": "FEEL THE HIT"
+      },
+      "title": {
+        "text": "Haptic Feedback"
+      }
+    }
+  ]
+}

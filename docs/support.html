@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - SlapPhone</title>
+    <style>
+        :root {
+            --bg: #1C1C1E;
+            --text: #FFFFFF;
+            --accent: #FF6B5B;
+            --secondary: #FFD93D;
+            --muted: #8E8E93;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        p, li {
+            color: #D1D1D6;
+            margin-bottom: 15px;
+        }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .faq-item h3 {
+            color: var(--secondary);
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            margin-bottom: 0;
+        }
+        .contact-card {
+            background: linear-gradient(135deg, rgba(255, 107, 91, 0.2), rgba(255, 217, 61, 0.1));
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact-card h2 {
+            margin-top: 0;
+        }
+        .contact-card a {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: transform 0.2s;
+        }
+        .contact-card a:hover {
+            transform: scale(1.05);
+        }
+        .tip-box {
+            background: rgba(255, 217, 61, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--muted);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Support</h1>
+    <p class="subtitle">SlapPhone - We're here to help</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>Why isn't my phone detecting slaps?</h3>
+        <p>Make sure detection is enabled (green dot in the top-left). Also check that the sensitivity slider isn't set too low. Try increasing sensitivity in Settings if light slaps aren't registering.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I use SlapPhone in the background?</h3>
+        <p>Yes! SlapPhone continues detecting impacts when minimized. Make sure "Background Mode" is enabled in Settings. Note: Background detection uses more battery.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How do I change voice packs?</h3>
+        <p>Tap the voice pack indicator in the top-right of the home screen, or tap the waveform icon at the bottom. Select any of the 4 included voice packs.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Why does my phone vibrate with every slap?</h3>
+        <p>That's haptic feedback! It makes impacts feel more satisfying. You can disable it in Settings if you prefer sounds only.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What's the USB Moaner feature?</h3>
+        <p>When you plug in or unplug your charger, SlapPhone plays a reaction sound. Your phone has feelings about being plugged in. You can disable this in Settings.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Will slapping my phone damage it?</h3>
+        <p>SlapPhone detects impacts using the accelerometer - no actual violence required. A firm tap or shake works great. That said, we take no responsibility if you get too enthusiastic. Please slap responsibly.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I restore my purchase on a new device?</h3>
+        <p>SlapPhone is a one-time purchase tied to your Apple ID. On a new device, just download the app and it should recognize your purchase automatically.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How do I reset my statistics?</h3>
+        <p>Go to Settings and scroll to the bottom for the "Reset Statistics" option. This clears your lifetime slaps, throws, and shakes. This action cannot be undone.</p>
+    </div>
+
+    <div class="tip-box">
+        <strong>Pro Tip:</strong> For the best experience, try different voice packs in different situations. "Dramatic" is great for parties, "Silly" is perfect for kids, and "Angry" is excellent for stress relief.
+    </div>
+
+    <div class="contact-card">
+        <h2>Still Need Help?</h2>
+        <p>We're happy to assist with any issues or questions.</p>
+        <a href="mailto:support@slapphone.app">Contact Support</a>
+    </div>
+
+    <h2>Bug Reports</h2>
+    <p>Found a bug? Please email us at <a href="mailto:bugs@slapphone.app" style="color: var(--accent);">bugs@slapphone.app</a> with:</p>
+    <ul>
+        <li>Your iPhone model</li>
+        <li>iOS version</li>
+        <li>Steps to reproduce the issue</li>
+        <li>What you expected vs what happened</li>
+    </ul>
+
+    <h2>Feature Requests</h2>
+    <p>Got an idea for a new voice pack or feature? We'd love to hear it! Email <a href="mailto:ideas@slapphone.app" style="color: var(--accent);">ideas@slapphone.app</a> with your suggestions.</p>
+
+    <footer>
+        <p>&copy; 2026 SlapPhone. All rights reserved.</p>
+        <p>Slap responsibly.</p>
+    </footer>
+</body>
+</html>

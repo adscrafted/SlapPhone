@@ -1,0 +1,56 @@
+# Snapfile for SlapPhone Screenshots
+# Documentation: https://docs.fastlane.tools/actions/snapshot/
+
+# Devices to capture screenshots on
+devices([
+  "iPhone 16 Pro Max",      # 6.7" - Required
+  "iPhone 15 Plus",         # 6.7" - Alternative
+  "iPhone 14 Pro Max",      # 6.7" - Alternative
+  "iPhone 8 Plus",          # 5.5" - Required for older devices
+  "iPad Pro (12.9-inch) (6th generation)"  # iPad - Optional but recommended
+])
+
+# Languages to capture
+languages([
+  "en-US"
+])
+
+# Xcode scheme
+scheme("SlapPhoneUITests")
+
+# Output directory
+output_directory("./fastlane/screenshots")
+
+# Clear previous screenshots
+clear_previous_screenshots(true)
+
+# Stop on first error
+stop_after_first_error(false)
+
+# Use concurrent simulators for speed
+concurrent_simulators(true)
+
+# Skip if already captured
+skip_open_summary(true)
+
+# Reinstall app before screenshots
+reinstall_app(true)
+
+# Dark mode
+dark_mode(true)
+
+# Override status bar
+override_status_bar(true)
+override_status_bar_arguments("--time 9:41 --batteryState charged --batteryLevel 100 --cellularMode active --cellularBars 4")
+
+# Localize simulator
+localize_simulator(true)
+
+# Erase simulator before running
+erase_simulator(false)
+
+# Headless mode (no simulator UI)
+headless(true)
+
+# Number of retries
+number_of_retries(3)

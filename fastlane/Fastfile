@@ -1,0 +1,123 @@
+# Fastfile for SlapPhone
+# Documentation: https://docs.fastlane.tools
+
+default_platform(:ios)
+
+platform :ios do
+
+  # ==================== SCREENSHOTS ====================
+
+  desc "Capture App Store screenshots"
+  lane :screenshots do
+    capture_screenshots(
+      workspace: "SlapPhone.xcodeproj/project.xcworkspace",
+      scheme: "SlapPhone",
+      output_directory: "./fastlane/screenshots",
+      clear_previous_screenshots: true,
+      reinstall_app: true,
+      stop_after_first_error: false,
+      concurrent_simulators: true
+    )
+  end
+
+  desc "Frame screenshots with device bezels and marketing text"
+  lane :frame_screenshots do
+    frame_screenshots(
+      path: "./fastlane/screenshots",
+      white: false,
+      background_color: "#1C1C1E"
+    )
+  end
+
+  desc "Generate all screenshots with framing"
+  lane :generate_screenshots do
+    screenshots
+    frame_screenshots
+  end
+
+  # ==================== BUILD & UPLOAD ====================
+
+  desc "Build and upload to App Store Connect (TestFlight)"
+  lane :beta do
+    ensure_git_status_clean
+    increment_build_number(xcodeproj: "SlapPhone.xcodeproj")
+
+    build_app(
+      workspace: "SlapPhone.xcodeproj/project.xcworkspace",
+      scheme: "SlapPhone",
+      export_method: "app-store",
+      output_directory: "./build",
+      output_name: "SlapPhone.ipa"
+    )
+
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true,
+      apple_id: ENV["APPLE_ID"],
+      app_identifier: "com.slapphone.app"
+    )
+  end
+
+  desc "Build and upload to App Store for review"
+  lane :release do
+    ensure_git_status_clean
+    increment_build_number(xcodeproj: "SlapPhone.xcodeproj")
+
+    build_app(
+      workspace: "SlapPhone.xcodeproj/project.xcworkspace",
+      scheme: "SlapPhone",
+      export_method: "app-store",
+      output_directory: "./build",
+      output_name: "SlapPhone.ipa"
+    )
+
+    upload_to_app_store(
+      app_identifier: "com.slapphone.app",
+      skip_screenshots: false,
+      skip_metadata: false,
+      submit_for_review: false,
+      automatic_release: false,
+      force: true
+    )
+  end
+
+  # ==================== METADATA ====================
+
+  desc "Download existing metadata from App Store Connect"
+  lane :download_metadata do
+    download_metadata(
+      app_identifier: "com.slapphone.app",
+      force: true
+    )
+  end
+
+  desc "Upload metadata to App Store Connect"
+  lane :upload_metadata do
+    upload_to_app_store(
+      app_identifier: "com.slapphone.app",
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      force: true
+    )
+  end
+
+  # ==================== CERTIFICATES ====================
+
+  desc "Sync certificates and provisioning profiles"
+  lane :certs do
+    match(
+      type: "appstore",
+      app_identifier: "com.slapphone.app",
+      readonly: true
+    )
+  end
+
+  desc "Create new certificates and profiles"
+  lane :create_certs do
+    match(
+      type: "appstore",
+      app_identifier: "com.slapphone.app",
+      readonly: false
+    )
+  end
+
+end

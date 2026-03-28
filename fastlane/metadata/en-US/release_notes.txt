@@ -1,0 +1,11 @@
+Version 1.0 - Initial Release
+
+• Slap, throw, and shake detection
+• 4 voice packs with 32+ sounds
+• USB Moaner feature
+• Lifetime statistics tracking
+• Adjustable sensitivity
+• Background mode support
+• Haptic feedback
+
+Your phone is ready to scream.
