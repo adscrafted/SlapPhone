@@ -108,7 +108,8 @@ class PaywallManager: ObservableObject {
         }
     }
 
-    // For testing in simulator
+    #if DEBUG
+    // For testing in simulator only
     func simulatePurchase() {
         isPurchased = true
         purchaseState = .purchased
@@ -120,4 +121,5 @@ class PaywallManager: ObservableObject {
         purchaseState = .idle
         UserDefaults.standard.set(false, forKey: "isPurchased")
     }
+    #endif
 }

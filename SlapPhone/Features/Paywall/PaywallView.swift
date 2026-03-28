@@ -110,14 +110,21 @@ struct PaywallView: View {
 
     private var purchaseSection: some View {
         VStack(spacing: 16) {
-            // Price display
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                Text("$")
-                    .font(SlapFonts.title)
-                    .foregroundStyle(SlapColors.text.opacity(0.7))
-                Text("4.99")
+            // Price display - uses actual price from StoreKit
+            if let product = paywallManager.product {
+                Text(product.displayPrice)
                     .font(SlapFonts.heroTitle)
                     .foregroundStyle(SlapColors.text)
+            } else {
+                // Fallback while loading
+                HStack(alignment: .firstTextBaseline, spacing: 4) {
+                    Text("$")
+                        .font(SlapFonts.title)
+                        .foregroundStyle(SlapColors.text.opacity(0.7))
+                    Text("4.99")
+                        .font(SlapFonts.heroTitle)
+                        .foregroundStyle(SlapColors.text)
+                }
             }
 
             Text("One-time purchase. No subscriptions.")

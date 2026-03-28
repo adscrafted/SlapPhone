@@ -104,30 +104,34 @@ struct SettingsView: View {
                         // About section
                         settingsSection(title: "About") {
                             VStack(spacing: 12) {
-                                aboutRow(label: "Version", value: "1.0.0")
-                                aboutRow(label: "Build", value: "1")
+                                aboutRow(label: "Version", value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
+                                aboutRow(label: "Build", value: Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1")
 
-                                Link(destination: URL(string: "https://example.com/privacy")!) {
-                                    HStack {
-                                        Text("Privacy Policy")
-                                            .font(SlapFonts.bodyMedium)
-                                        Spacer()
-                                        Image(systemName: "arrow.up.right")
-                                            .font(.caption)
+                                if let privacyURL = URL(string: "https://slapphone.app/privacy") {
+                                    Link(destination: privacyURL) {
+                                        HStack {
+                                            Text("Privacy Policy")
+                                                .font(SlapFonts.bodyMedium)
+                                            Spacer()
+                                            Image(systemName: "arrow.up.right")
+                                                .font(.caption)
+                                        }
+                                        .foregroundStyle(SlapColors.primary)
                                     }
-                                    .foregroundStyle(SlapColors.primary)
+                                    .padding(.top, 8)
                                 }
-                                .padding(.top, 8)
 
-                                Link(destination: URL(string: "https://example.com/terms")!) {
-                                    HStack {
-                                        Text("Terms of Service")
-                                            .font(SlapFonts.bodyMedium)
-                                        Spacer()
-                                        Image(systemName: "arrow.up.right")
-                                            .font(.caption)
+                                if let termsURL = URL(string: "https://slapphone.app/terms") {
+                                    Link(destination: termsURL) {
+                                        HStack {
+                                            Text("Terms of Service")
+                                                .font(SlapFonts.bodyMedium)
+                                            Spacer()
+                                            Image(systemName: "arrow.up.right")
+                                                .font(.caption)
+                                        }
+                                        .foregroundStyle(SlapColors.primary)
                                     }
-                                    .foregroundStyle(SlapColors.primary)
                                 }
                             }
                         }
