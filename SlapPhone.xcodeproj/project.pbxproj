@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		/* App */
+		AA0001 /* SlapPhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0001; };
+		AA0002 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0002; };
+
+		/* Models */
+		AA0010 /* VoicePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0010; };
+		AA0011 /* ImpactEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0011; };
+		AA0012 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0012; };
+
+		/* Services */
+		AA0020 /* ImpactDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0020; };
+		AA0021 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0021; };
+		AA0022 /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0022; };
+		AA0023 /* AccessoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0023; };
+
+		/* Managers */
+		AA0030 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0030; };
+		AA0031 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0031; };
+
+		/* Features */
+		AA0040 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0040; };
+		AA0041 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0041; };
+		AA0042 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0042; };
+		AA0043 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0043; };
+		AA0044 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0044; };
+		AA0045 /* VoicePacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0045; };
+
+		/* UI Components */
+		AA0050 /* ImpactVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0050; };
+		AA0051 /* SlapCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0051; };
+		AA0052 /* SensitivitySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0052; };
+		AA0053 /* SlapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0053; };
+
+		/* UI Styles */
+		AA0060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0060; };
+		AA0061 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0061; };
+		AA0062 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0062; };
+
+		/* Extensions */
+		AA0070 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0070; };
+		AA0071 /* CMAcceleration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0071; };
+
+		/* Resources */
+		AA0080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0080; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		/* Product */
+		FP0001 /* SlapPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlapPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		/* App */
+		FA0001 /* SlapPhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapPhoneApp.swift; sourceTree = "<group>"; };
+		FA0002 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+
+		/* Models */
+		FA0010 /* VoicePack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack.swift; sourceTree = "<group>"; };
+		FA0011 /* ImpactEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactEvent.swift; sourceTree = "<group>"; };
+		FA0012 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+
+		/* Services */
+		FA0020 /* ImpactDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactDetectionService.swift; sourceTree = "<group>"; };
+		FA0021 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		FA0022 /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticService.swift; sourceTree = "<group>"; };
+		FA0023 /* AccessoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryService.swift; sourceTree = "<group>"; };
+
+		/* Managers */
+		FA0030 /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
+		FA0031 /* StatisticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
+
+		/* Features */
+		FA0040 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FA0041 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		FA0042 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FA0043 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA0044 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FA0045 /* VoicePacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePacksView.swift; sourceTree = "<group>"; };
+
+		/* UI Components */
+		FA0050 /* ImpactVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactVisualizer.swift; sourceTree = "<group>"; };
+		FA0051 /* SlapCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapCounter.swift; sourceTree = "<group>"; };
+		FA0052 /* SensitivitySlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitivitySlider.swift; sourceTree = "<group>"; };
+		FA0053 /* SlapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapButton.swift; sourceTree = "<group>"; };
+
+		/* UI Styles */
+		FA0060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FA0061 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FA0062 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+
+		/* Extensions */
+		FA0070 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		FA0071 /* CMAcceleration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMAcceleration+Extensions.swift"; sourceTree = "<group>"; };
+
+		/* Resources */
+		FA0080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA0081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0082 /* SlapPhone.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SlapPhone.storekit; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC0001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		GR0000 = {
+			isa = PBXGroup;
+			children = (
+				GR0001 /* SlapPhone */,
+				GR0002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		GR0001 /* SlapPhone */ = {
+			isa = PBXGroup;
+			children = (
+				GR0010 /* App */,
+				GR0020 /* Core */,
+				GR0030 /* Features */,
+				GR0040 /* UI */,
+				GR0050 /* Extensions */,
+				GR0060 /* Resources */,
+			);
+			path = SlapPhone;
+			sourceTree = "<group>";
+		};
+		GR0002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FP0001 /* SlapPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GR0010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA0001 /* SlapPhoneApp.swift */,
+				FA0002 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		GR0020 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				GR0021 /* Models */,
+				GR0022 /* Services */,
+				GR0023 /* Managers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		GR0021 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA0010 /* VoicePack.swift */,
+				FA0011 /* ImpactEvent.swift */,
+				FA0012 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GR0022 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA0020 /* ImpactDetectionService.swift */,
+				FA0021 /* AudioService.swift */,
+				FA0022 /* HapticService.swift */,
+				FA0023 /* AccessoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		GR0023 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA0030 /* PaywallManager.swift */,
+				FA0031 /* StatisticsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		GR0030 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				GR0031 /* Splash */,
+				GR0032 /* Paywall */,
+				GR0033 /* Home */,
+				GR0034 /* Settings */,
+				GR0035 /* VoicePacks */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		GR0031 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FA0040 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		GR0032 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				FA0041 /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		GR0033 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA0042 /* HomeView.swift */,
+				FA0043 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		GR0034 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FA0044 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		GR0035 /* VoicePacks */ = {
+			isa = PBXGroup;
+			children = (
+				FA0045 /* VoicePacksView.swift */,
+			);
+			path = VoicePacks;
+			sourceTree = "<group>";
+		};
+		GR0040 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				GR0041 /* Components */,
+				GR0042 /* Styles */,
+				GR0043 /* Modifiers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		GR0041 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FA0050 /* ImpactVisualizer.swift */,
+				FA0051 /* SlapCounter.swift */,
+				FA0052 /* SensitivitySlider.swift */,
+				FA0053 /* SlapButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		GR0042 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FA0060 /* Colors.swift */,
+				FA0061 /* Fonts.swift */,
+				FA0062 /* Animations.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		GR0043 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		GR0050 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA0070 /* View+Extensions.swift */,
+				FA0071 /* CMAcceleration+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		GR0060 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA0080 /* Assets.xcassets */,
+				FA0081 /* Info.plist */,
+				FA0082 /* SlapPhone.storekit */,
+				GR0061 /* Sounds */,
+				GR0062 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		GR0061 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		GR0062 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		NT0001 /* SlapPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0001 /* Build configuration list for PBXNativeTarget "SlapPhone" */;
+			buildPhases = (
+				SP0001 /* Sources */,
+				FC0001 /* Frameworks */,
+				RP0001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlapPhone;
+			productName = SlapPhone;
+			productReference = FP0001 /* SlapPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PR0001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					NT0001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = BC0002 /* Build configuration list for PBXProject "SlapPhone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = GR0000;
+			productRefGroup = GR0002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NT0001 /* SlapPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		RP0001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0080 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SP0001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0001 /* SlapPhoneApp.swift in Sources */,
+				AA0002 /* AppCoordinator.swift in Sources */,
+				AA0010 /* VoicePack.swift in Sources */,
+				AA0011 /* ImpactEvent.swift in Sources */,
+				AA0012 /* Settings.swift in Sources */,
+				AA0020 /* ImpactDetectionService.swift in Sources */,
+				AA0021 /* AudioService.swift in Sources */,
+				AA0022 /* HapticService.swift in Sources */,
+				AA0023 /* AccessoryService.swift in Sources */,
+				AA0030 /* PaywallManager.swift in Sources */,
+				AA0031 /* StatisticsManager.swift in Sources */,
+				AA0040 /* SplashView.swift in Sources */,
+				AA0041 /* PaywallView.swift in Sources */,
+				AA0042 /* HomeView.swift in Sources */,
+				AA0043 /* HomeViewModel.swift in Sources */,
+				AA0044 /* SettingsView.swift in Sources */,
+				AA0045 /* VoicePacksView.swift in Sources */,
+				AA0050 /* ImpactVisualizer.swift in Sources */,
+				AA0051 /* SlapCounter.swift in Sources */,
+				AA0052 /* SensitivitySlider.swift in Sources */,
+				AA0053 /* SlapButton.swift in Sources */,
+				AA0060 /* Colors.swift in Sources */,
+				AA0061 /* Fonts.swift in Sources */,
+				AA0062 /* Animations.swift in Sources */,
+				AA0070 /* View+Extensions.swift in Sources */,
+				AA0071 /* CMAcceleration+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CF0001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF0002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF0003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SlapPhone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SlapPhone;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slapphone.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF0004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SlapPhone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SlapPhone;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slapphone.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC0001 /* Build configuration list for PBXNativeTarget "SlapPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0003 /* Debug */,
+				CF0004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0002 /* Build configuration list for PBXProject "SlapPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0001 /* Debug */,
+				CF0002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PR0001 /* Project object */;
+}
