@@ -46,3 +46,4 @@ iOSInjectionProject/
 # Temporary files
 *.tmp
 *.temp
+fastlane/api_key.json

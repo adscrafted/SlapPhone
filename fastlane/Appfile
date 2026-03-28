@@ -2,7 +2,7 @@
 # Documentation: https://docs.fastlane.tools/advanced/#appfile
 
 # App Identifier (Bundle ID)
-app_identifier("com.slapphone.app")
+app_identifier("com.adscrafted.slapphone")
 
 # Your Apple Developer email
 apple_id(ENV["APPLE_ID"] || "anthony@adscrafted.com")

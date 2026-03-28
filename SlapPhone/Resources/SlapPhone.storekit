@@ -15,7 +15,7 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "com.slapphone.fullversion",
+      "productID" : "com.adscrafted.slapphone.fullversion",
       "referenceName" : "Full Version",
       "type" : "NonConsumable"
     }

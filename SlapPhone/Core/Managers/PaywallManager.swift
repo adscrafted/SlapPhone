@@ -3,7 +3,7 @@ import StoreKit
 
 @MainActor
 class PaywallManager: ObservableObject {
-    static let productID = "com.slapphone.fullversion"
+    static let productID = "com.adscrafted.slapphone.fullversion"
 
     @Published var isPurchased: Bool = false
     @Published var product: Product?

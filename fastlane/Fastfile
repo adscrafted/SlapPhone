@@ -3,7 +3,68 @@
 
 default_platform(:ios)
 
+# Load API key for App Store Connect
+def api_key
+  app_store_connect_api_key(
+    key_id: "49PVFZRL27",
+    issuer_id: "5210488e-2060-4ef4-9cf7-d0b7975a92e0",
+    key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_49PVFZRL27.p8")
+  )
+end
+
 platform :ios do
+
+  # ==================== APP SETUP ====================
+
+  desc "Register Bundle ID in Apple Developer Portal"
+  lane :register_app do
+    produce(
+      app_identifier: "com.adscrafted.slapphone",
+      app_name: "SlapPhone",
+      language: "English",
+      app_version: "1.0",
+      sku: "slapphone",
+      team_id: "4BLK4KNLW2",
+      itc_team_id: "4BLK4KNLW2",
+      enable_services: {
+        in_app_purchase: "on"
+      }
+    )
+  end
+
+  desc "Create In-App Purchase"
+  lane :create_iap do
+    # Use Spaceship directly for IAP creation
+    require 'spaceship'
+
+    Spaceship::ConnectAPI.token = api_key
+
+    app = Spaceship::ConnectAPI::App.find("com.adscrafted.slapphone")
+
+    if app.nil?
+      UI.error("App not found. Run 'fastlane register_app' first.")
+      next
+    end
+
+    # Check if IAP already exists
+    existing_iaps = app.get_in_app_purchases
+    if existing_iaps.any? { |iap| iap.product_id == "com.adscrafted.slapphone.fullversion" }
+      UI.success("IAP 'com.adscrafted.slapphone.fullversion' already exists!")
+      next
+    end
+
+    UI.message("Creating In-App Purchase...")
+
+    iap = Spaceship::ConnectAPI::InAppPurchase.create(
+      app_id: app.id,
+      name: "Full Version",
+      product_id: "com.adscrafted.slapphone.fullversion",
+      in_app_purchase_type: Spaceship::ConnectAPI::InAppPurchase::InAppPurchaseType::NON_CONSUMABLE,
+      review_note: "Unlocks all features including all voice packs, throw detection, and lifetime statistics."
+    )
+
+    UI.success("Created IAP: #{iap.product_id}")
+  end
 
   # ==================== SCREENSHOTS ====================
 
@@ -51,9 +112,9 @@ platform :ios do
     )
 
     upload_to_testflight(
+      api_key: api_key,
       skip_waiting_for_build_processing: true,
-      apple_id: ENV["APPLE_ID"],
-      app_identifier: "com.slapphone.app"
+      app_identifier: "com.adscrafted.slapphone"
     )
   end
 
@@ -71,7 +132,7 @@ platform :ios do
     )
 
     upload_to_app_store(
-      app_identifier: "com.slapphone.app",
+      app_identifier: "com.adscrafted.slapphone",
       skip_screenshots: false,
       skip_metadata: false,
       submit_for_review: false,
@@ -85,7 +146,7 @@ platform :ios do
   desc "Download existing metadata from App Store Connect"
   lane :download_metadata do
     download_metadata(
-      app_identifier: "com.slapphone.app",
+      app_identifier: "com.adscrafted.slapphone",
       force: true
     )
   end
@@ -93,7 +154,7 @@ platform :ios do
   desc "Upload metadata to App Store Connect"
   lane :upload_metadata do
     upload_to_app_store(
-      app_identifier: "com.slapphone.app",
+      app_identifier: "com.adscrafted.slapphone",
       skip_binary_upload: true,
       skip_screenshots: true,
       force: true
@@ -106,7 +167,7 @@ platform :ios do
   lane :certs do
     match(
       type: "appstore",
-      app_identifier: "com.slapphone.app",
+      app_identifier: "com.adscrafted.slapphone",
       readonly: true
     )
   end
@@ -115,7 +176,7 @@ platform :ios do
   lane :create_certs do
     match(
       type: "appstore",
-      app_identifier: "com.slapphone.app",
+      app_identifier: "com.adscrafted.slapphone",
       readonly: false
     )
   end
