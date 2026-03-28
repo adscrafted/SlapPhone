@@ -87,6 +87,22 @@ Download existing metadata from App Store Connect
 
 Upload metadata to App Store Connect
 
+### ios upload_screenshots
+
+```sh
+[bundle exec] fastlane ios upload_screenshots
+```
+
+Upload screenshots to App Store Connect
+
+### ios upload_all
+
+```sh
+[bundle exec] fastlane ios upload_all
+```
+
+Upload everything (metadata + screenshots) to App Store Connect
+
 ### ios certs
 
 ```sh
