@@ -7,119 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		/* App */
-		AA0001 /* SlapPhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0001; };
-		AA0002 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0002; };
-
-		/* Models */
-		AA0010 /* VoicePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0010; };
-		AA0011 /* ImpactEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0011; };
-		AA0012 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0012; };
-
-		/* Services */
-		AA0020 /* ImpactDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0020; };
-		AA0021 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0021; };
-		AA0022 /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0022; };
-		AA0023 /* AccessoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0023; };
-
-		/* Managers */
-		AA0030 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0030; };
-		AA0031 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0031; };
-
-		/* Features */
-		AA0040 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0040; };
-		AA0041 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0041; };
-		AA0042 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0042; };
-		AA0043 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0043; };
-		AA0044 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0044; };
-		AA0045 /* VoicePacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0045; };
-
-		/* UI Components */
-		AA0050 /* ImpactVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0050; };
-		AA0051 /* SlapCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0051; };
-		AA0052 /* SensitivitySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0052; };
-		AA0053 /* SlapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0053; };
-
-		/* UI Styles */
-		AA0060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0060; };
-		AA0061 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0061; };
-		AA0062 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0062; };
-
-		/* Extensions */
-		AA0070 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0070; };
-		AA0071 /* CMAcceleration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0071; };
-
-		/* Resources */
-		AA0080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0080; };
-		AA0083 /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0083; };
-		AA0090 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FA0090; };
-		AA0084 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = GR0061; };
-
-		/* UI Tests */
-		AA0100 /* SlapPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0100; };
-		AA0101 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0101; };
+		21CD4D23E41D0FBF874A924B /* ImpactEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFA6BBFD6E105447AB5750 /* ImpactEventTests.swift */; };
+		42AFC5AE00E014A6D6F562BE /* StatisticsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB072570AC9BC502C4233F /* StatisticsManagerTests.swift */; };
+		4599FE3FA755B8D7A443691A /* PaywallManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A96DC89C9F36A6EB314AE9 /* PaywallManagerTests.swift */; };
+		9D4A40746B5B9770DF3BF0D2 /* VoicePackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19F0A5B2AAB030253F3B1F /* VoicePackTests.swift */; };
+		A1F2D564834CD1E01CB9CA5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88433D9BA117F601B65709B2 /* Foundation.framework */; };
+		AA0001 /* SlapPhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0001 /* SlapPhoneApp.swift */; };
+		AA0002 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0002 /* AppCoordinator.swift */; };
+		AA0010 /* VoicePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0010 /* VoicePack.swift */; };
+		AA0011 /* ImpactEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0011 /* ImpactEvent.swift */; };
+		AA0012 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0012 /* Settings.swift */; };
+		AA0020 /* ImpactDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0020 /* ImpactDetectionService.swift */; };
+		AA0021 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0021 /* AudioService.swift */; };
+		AA0022 /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0022 /* HapticService.swift */; };
+		AA0023 /* AccessoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0023 /* AccessoryService.swift */; };
+		AA0030 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0030 /* PaywallManager.swift */; };
+		AA0031 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0031 /* StatisticsManager.swift */; };
+		AA0040 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0040 /* SplashView.swift */; };
+		AA0041 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0041 /* PaywallView.swift */; };
+		AA0042 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0042 /* HomeView.swift */; };
+		AA0043 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0043 /* HomeViewModel.swift */; };
+		AA0044 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0044 /* SettingsView.swift */; };
+		AA0045 /* VoicePacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0045 /* VoicePacksView.swift */; };
+		AA0050 /* ImpactVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0050 /* ImpactVisualizer.swift */; };
+		AA0051 /* SlapCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0051 /* SlapCounter.swift */; };
+		AA0052 /* SensitivitySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0052 /* SensitivitySlider.swift */; };
+		AA0053 /* SlapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0053 /* SlapButton.swift */; };
+		AA0060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0060 /* Colors.swift */; };
+		AA0061 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0061 /* Fonts.swift */; };
+		AA0062 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0062 /* Animations.swift */; };
+		AA0070 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0070 /* View+Extensions.swift */; };
+		AA0071 /* CMAcceleration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0071 /* CMAcceleration+Extensions.swift */; };
+		AA0080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0080 /* Assets.xcassets */; };
+		AA0083 /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0083 /* Bangers-Regular.ttf */; };
+		AA0084 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = GR0061 /* Sounds */; };
+		AA0090 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FA0090 /* PrivacyInfo.xcprivacy */; };
+		AA0100 /* SlapPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0100 /* SlapPhoneUITests.swift */; };
+		AA0101 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0101 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXFileReference section */
-		/* Product */
-		FP0001 /* SlapPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlapPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* Begin PBXContainerItemProxy section */
+		71748526D802BDCA6C6FB70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PR0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT0001;
+			remoteInfo = SlapPhone;
+		};
+		CP0001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PR0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT0001;
+			remoteInfo = SlapPhone;
+		};
+/* End PBXContainerItemProxy section */
 
-		/* App */
+/* Begin PBXFileReference section */
+		63BB072570AC9BC502C4233F /* StatisticsManagerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsManagerTests.swift; sourceTree = "<group>"; };
+		6F19F0A5B2AAB030253F3B1F /* VoicePackTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoicePackTests.swift; sourceTree = "<group>"; };
+		78A96DC89C9F36A6EB314AE9 /* PaywallManagerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaywallManagerTests.swift; sourceTree = "<group>"; };
+		88433D9BA117F601B65709B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D1DFA6BBFD6E105447AB5750 /* ImpactEventTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImpactEventTests.swift; sourceTree = "<group>"; };
+		EA75B39B3F977682A4B1CEB7 /* SlapPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0001 /* SlapPhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapPhoneApp.swift; sourceTree = "<group>"; };
 		FA0002 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-
-		/* Models */
 		FA0010 /* VoicePack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack.swift; sourceTree = "<group>"; };
 		FA0011 /* ImpactEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactEvent.swift; sourceTree = "<group>"; };
 		FA0012 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-
-		/* Services */
 		FA0020 /* ImpactDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactDetectionService.swift; sourceTree = "<group>"; };
 		FA0021 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		FA0022 /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticService.swift; sourceTree = "<group>"; };
 		FA0023 /* AccessoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryService.swift; sourceTree = "<group>"; };
-
-		/* Managers */
 		FA0030 /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
 		FA0031 /* StatisticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
-
-		/* Features */
 		FA0040 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FA0041 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		FA0042 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA0043 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FA0044 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FA0045 /* VoicePacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePacksView.swift; sourceTree = "<group>"; };
-
-		/* UI Components */
 		FA0050 /* ImpactVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactVisualizer.swift; sourceTree = "<group>"; };
 		FA0051 /* SlapCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapCounter.swift; sourceTree = "<group>"; };
 		FA0052 /* SensitivitySlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitivitySlider.swift; sourceTree = "<group>"; };
 		FA0053 /* SlapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapButton.swift; sourceTree = "<group>"; };
-
-		/* UI Styles */
 		FA0060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FA0061 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FA0062 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
-
-		/* Extensions */
 		FA0070 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		FA0071 /* CMAcceleration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMAcceleration+Extensions.swift"; sourceTree = "<group>"; };
-
-		/* Resources */
 		FA0080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0082 /* SlapPhone.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SlapPhone.storekit; sourceTree = "<group>"; };
 		FA0083 /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bangers-Regular.ttf"; sourceTree = "<group>"; };
 		FA0090 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-
-		/* UI Tests */
-		FP0002 /* SlapPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0100 /* SlapPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapPhoneUITests.swift; sourceTree = "<group>"; };
 		FA0101 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		FP0001 /* SlapPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlapPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FP0002 /* SlapPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		GR0061 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AB6AFB552407ABD948336285 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F2D564834CD1E01CB9CA5F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC0001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,12 +134,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D305E43C1FC206142074E5A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				88433D9BA117F601B65709B2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		65AE7D69C1C09C4BCDBD2558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D305E43C1FC206142074E5A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B9D2D7FA39D0D8CA55EF280 /* SlapPhoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				63BB072570AC9BC502C4233F /* StatisticsManagerTests.swift */,
+				D1DFA6BBFD6E105447AB5750 /* ImpactEventTests.swift */,
+				6F19F0A5B2AAB030253F3B1F /* VoicePackTests.swift */,
+				78A96DC89C9F36A6EB314AE9 /* PaywallManagerTests.swift */,
+			);
+			name = SlapPhoneTests;
+			path = SlapPhoneTests;
+			sourceTree = "<group>";
+		};
 		GR0000 = {
 			isa = PBXGroup;
 			children = (
 				GR0001 /* SlapPhone */,
 				GR0070 /* SlapPhoneUITests */,
 				GR0002 /* Products */,
+				65AE7D69C1C09C4BCDBD2558 /* Frameworks */,
+				7B9D2D7FA39D0D8CA55EF280 /* SlapPhoneTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,17 +191,9 @@
 			children = (
 				FP0001 /* SlapPhone.app */,
 				FP0002 /* SlapPhoneUITests.xctest */,
+				EA75B39B3F977682A4B1CEB7 /* SlapPhoneTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		GR0070 /* SlapPhoneUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FA0100 /* SlapPhoneUITests.swift */,
-				FA0101 /* SnapshotHelper.swift */,
-			);
-			path = SlapPhoneUITests;
 			sourceTree = "<group>";
 		};
 		GR0010 /* App */ = {
@@ -339,12 +358,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		GR0061 /* Sounds */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = folder;
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		GR0062 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,27 +366,36 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		GR0070 /* SlapPhoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA0100 /* SlapPhoneUITests.swift */,
+				FA0101 /* SnapshotHelper.swift */,
+			);
+			path = SlapPhoneUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXContainerItemProxy section */
-		CP0001 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = PR0001 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = NT0001;
-			remoteInfo = SlapPhone;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXTargetDependency section */
-		TD0001 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = NT0001 /* SlapPhone */;
-			targetProxy = CP0001 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXNativeTarget section */
+		6AA297946E48EF2A2FDC1520 /* SlapPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A07AD56DD2DFCF5814EB6A82 /* Build configuration list for PBXNativeTarget "SlapPhoneTests" */;
+			buildPhases = (
+				979682FAA9501812C7F79252 /* Sources */,
+				AB6AFB552407ABD948336285 /* Frameworks */,
+				B00982CF29D84A1F1026D6A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA7C602F72930446577717E /* PBXTargetDependency */,
+			);
+			name = SlapPhoneTests;
+			productName = SlapPhoneTests;
+			productReference = EA75B39B3F977682A4B1CEB7 /* SlapPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		NT0001 /* SlapPhone */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC0001 /* Build configuration list for PBXNativeTarget "SlapPhone" */;
@@ -443,11 +465,19 @@
 			targets = (
 				NT0001 /* SlapPhone */,
 				NT0002 /* SlapPhoneUITests */,
+				6AA297946E48EF2A2FDC1520 /* SlapPhoneTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B00982CF29D84A1F1026D6A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		RP0001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +499,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		979682FAA9501812C7F79252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42AFC5AE00E014A6D6F562BE /* StatisticsManagerTests.swift in Sources */,
+				21CD4D23E41D0FBF874A924B /* ImpactEventTests.swift in Sources */,
+				9D4A40746B5B9770DF3BF0D2 /* VoicePackTests.swift in Sources */,
+				4599FE3FA755B8D7A443691A /* PaywallManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		SP0001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -513,7 +554,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DEA7C602F72930446577717E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlapPhone;
+			target = NT0001 /* SlapPhone */;
+			targetProxy = 71748526D802BDCA6C6FB70E /* PBXContainerItemProxy */;
+		};
+		TD0001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = NT0001 /* SlapPhone */;
+			targetProxy = CP0001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0D742015C8E286D028CED4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BLK4KNLW2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adscrafted.slapphone.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlapPhone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SlapPhone";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9E74DEC306FAC234D0972C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BLK4KNLW2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adscrafted.slapphone.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlapPhone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SlapPhone";
+			};
+			name = Debug;
+		};
 		CF0001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -732,6 +822,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A07AD56DD2DFCF5814EB6A82 /* Build configuration list for PBXNativeTarget "SlapPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D742015C8E286D028CED4A5 /* Release */,
+				A9E74DEC306FAC234D0972C9 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BC0001 /* Build configuration list for PBXNativeTarget "SlapPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

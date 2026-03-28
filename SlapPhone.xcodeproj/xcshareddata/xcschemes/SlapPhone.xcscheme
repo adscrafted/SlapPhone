@@ -40,6 +40,16 @@
                ReferencedContainer = "container:SlapPhone.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6AA297946E48EF2A2FDC1520"
+               BuildableName = "SlapPhoneTests.xctest"
+               BlueprintName = "SlapPhoneTests"
+               ReferencedContainer = "container:SlapPhone.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
