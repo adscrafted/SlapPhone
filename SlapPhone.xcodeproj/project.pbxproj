@@ -51,6 +51,10 @@
 
 		/* Resources */
 		AA0080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0080; };
+
+		/* UI Tests */
+		AA0100 /* SlapPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0100; };
+		AA0101 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0101; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,10 +107,22 @@
 		FA0080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0082 /* SlapPhone.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SlapPhone.storekit; sourceTree = "<group>"; };
+
+		/* UI Tests */
+		FP0002 /* SlapPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0100 /* SlapPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapPhoneUITests.swift; sourceTree = "<group>"; };
+		FA0101 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FC0001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC0002 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				GR0001 /* SlapPhone */,
+				GR0070 /* SlapPhoneUITests */,
 				GR0002 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,8 +158,18 @@
 			isa = PBXGroup;
 			children = (
 				FP0001 /* SlapPhone.app */,
+				FP0002 /* SlapPhoneUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		GR0070 /* SlapPhoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA0100 /* SlapPhoneUITests.swift */,
+				FA0101 /* SnapshotHelper.swift */,
+			);
+			path = SlapPhoneUITests;
 			sourceTree = "<group>";
 		};
 		GR0010 /* App */ = {
@@ -322,6 +349,24 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXContainerItemProxy section */
+		CP0001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PR0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT0001;
+			remoteInfo = SlapPhone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		TD0001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = NT0001 /* SlapPhone */;
+			targetProxy = CP0001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXNativeTarget section */
 		NT0001 /* SlapPhone */ = {
 			isa = PBXNativeTarget;
@@ -340,6 +385,24 @@
 			productReference = FP0001 /* SlapPhone.app */;
 			productType = "com.apple.product-type.application";
 		};
+		NT0002 /* SlapPhoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0003 /* Build configuration list for PBXNativeTarget "SlapPhoneUITests" */;
+			buildPhases = (
+				SP0002 /* Sources */,
+				FC0002 /* Frameworks */,
+				RP0002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				TD0001 /* PBXTargetDependency */,
+			);
+			name = SlapPhoneUITests;
+			productName = SlapPhoneUITests;
+			productReference = FP0002 /* SlapPhoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -352,6 +415,10 @@
 				TargetAttributes = {
 					NT0001 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					NT0002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = NT0001;
 					};
 				};
 			};
@@ -369,6 +436,7 @@
 			projectRoot = "";
 			targets = (
 				NT0001 /* SlapPhone */,
+				NT0002 /* SlapPhoneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,6 +447,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0080 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		RP0002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +490,15 @@
 				AA0062 /* Animations.swift in Sources */,
 				AA0070 /* View+Extensions.swift in Sources */,
 				AA0071 /* CMAcceleration+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SP0002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0100 /* SlapPhoneUITests.swift in Sources */,
+				AA0101 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +686,40 @@
 			};
 			name = Release;
 		};
+		CF0005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slapphone.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlapPhone;
+			};
+			name = Debug;
+		};
+		CF0006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slapphone.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlapPhone;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -619,6 +737,15 @@
 			buildConfigurations = (
 				CF0001 /* Debug */,
 				CF0002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0003 /* Build configuration list for PBXNativeTarget "SlapPhoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0005 /* Debug */,
+				CF0006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
