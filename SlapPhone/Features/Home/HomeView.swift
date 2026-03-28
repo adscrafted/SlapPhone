@@ -71,9 +71,6 @@ struct HomeView: View {
             .onAppear {
                 startDetection()
             }
-            .onDisappear {
-                stopDetection()
-            }
             .onReceive(impactDetectionService.impactPublisher) { impact in
                 handleImpact(impact)
             }

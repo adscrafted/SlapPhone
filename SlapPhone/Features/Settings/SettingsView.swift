@@ -63,6 +63,12 @@ struct SettingsView: View {
                                     label: "Haptic Feedback",
                                     isOn: $settings.hapticFeedbackEnabled
                                 )
+
+                                ToggleButton(
+                                    icon: "moon.fill",
+                                    label: "Background Mode",
+                                    isOn: $settings.backgroundModeEnabled
+                                )
                             }
                         }
 

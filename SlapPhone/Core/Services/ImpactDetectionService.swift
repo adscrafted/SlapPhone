@@ -1,11 +1,16 @@
 import Foundation
 import CoreMotion
 import Combine
+import UIKit
 
 class ImpactDetectionService: ObservableObject {
     private let motionManager = CMMotionManager()
     private let settings = Settings.shared
     private var lastImpactTime: Date = .distantPast
+
+    // Use a dedicated queue for background processing
+    private let motionQueue = OperationQueue()
+    private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
 
     @Published var isDetecting: Bool = false
     @Published var currentAcceleration: Double = 0
@@ -21,6 +26,7 @@ class ImpactDetectionService: ObservableObject {
 
     init() {
         setupMotionManager()
+        setupBackgroundObservers()
     }
 
     private func setupMotionManager() {
@@ -30,22 +36,64 @@ class ImpactDetectionService: ObservableObject {
         }
 
         motionManager.accelerometerUpdateInterval = 1.0 / 60.0  // 60 Hz
+        motionQueue.name = "com.slapphone.motion"
+        motionQueue.qualityOfService = .userInteractive
+    }
+
+    private func setupBackgroundObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(appDidEnterBackground),
+            name: UIApplication.didEnterBackgroundNotification,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(appWillEnterForeground),
+            name: UIApplication.willEnterForegroundNotification,
+            object: nil
+        )
+    }
+
+    @objc private func appDidEnterBackground() {
+        guard isDetecting && settings.backgroundModeEnabled else { return }
+
+        // Start background task to keep detection running
+        backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+            self?.endBackgroundTask()
+        }
+    }
+
+    @objc private func appWillEnterForeground() {
+        endBackgroundTask()
+    }
+
+    private func endBackgroundTask() {
+        if backgroundTask != .invalid {
+            UIApplication.shared.endBackgroundTask(backgroundTask)
+            backgroundTask = .invalid
+        }
     }
 
     func startDetection() {
         guard !isDetecting else { return }
 
-        motionManager.startAccelerometerUpdates(to: .main) { [weak self] data, error in
+        // Use dedicated queue for background support
+        motionManager.startAccelerometerUpdates(to: motionQueue) { [weak self] data, error in
             guard let self = self, let data = data else { return }
             self.processAccelerometerData(data)
         }
 
-        isDetecting = true
+        DispatchQueue.main.async { [weak self] in
+            self?.isDetecting = true
+        }
     }
 
     func stopDetection() {
         motionManager.stopAccelerometerUpdates()
-        isDetecting = false
+        DispatchQueue.main.async { [weak self] in
+            self?.isDetecting = false
+        }
     }
 
     private func processAccelerometerData(_ data: CMAccelerometerData) {
@@ -56,7 +104,10 @@ class ImpactDetectionService: ObservableObject {
             acceleration.z * acceleration.z
         )
 
-        currentAcceleration = magnitude
+        // Update UI on main thread
+        DispatchQueue.main.async { [weak self] in
+            self?.currentAcceleration = magnitude
+        }
 
         // Check cooldown
         let now = Date()
@@ -111,8 +162,10 @@ class ImpactDetectionService: ObservableObject {
 
     private func triggerImpact(_ impact: ImpactEvent) {
         lastImpactTime = Date()
-        lastImpact = impact
-        impactPublisher.send(impact)
+        DispatchQueue.main.async { [weak self] in
+            self?.lastImpact = impact
+            self?.impactPublisher.send(impact)
+        }
     }
 
     deinit {

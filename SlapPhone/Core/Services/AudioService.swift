@@ -7,20 +7,92 @@ class AudioService: ObservableObject {
     private let settings = Settings.shared
     private var cancellables = Set<AnyCancellable>()
 
+    // Background audio support
+    private var silentAudioPlayer: AVAudioPlayer?
+    private var backgroundTimer: Timer?
+    @Published var isBackgroundModeActive: Bool = false
+
     @Published var isPlaying: Bool = false
 
     init() {
         setupAudioSession()
+        setupBackgroundAudio()
     }
 
     private func setupAudioSession() {
         do {
             let session = AVAudioSession.sharedInstance()
-            try session.setCategory(.playback, mode: .default, options: [.mixWithOthers])
+            // Use .playback to allow background audio, .duckOthers to lower other audio
+            try session.setCategory(.playback, mode: .default, options: [.mixWithOthers, .duckOthers])
             try session.setActive(true)
+
+            // Handle interruptions (phone calls, etc.)
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(handleInterruption),
+                name: AVAudioSession.interruptionNotification,
+                object: session
+            )
         } catch {
             print("Failed to setup audio session: \(error)")
         }
+    }
+
+    @objc private func handleInterruption(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
+            return
+        }
+
+        switch type {
+        case .began:
+            // Interruption began - pause background audio
+            silentAudioPlayer?.pause()
+        case .ended:
+            // Interruption ended - resume if we should be in background mode
+            if isBackgroundModeActive {
+                try? AVAudioSession.sharedInstance().setActive(true)
+                silentAudioPlayer?.play()
+            }
+        @unknown default:
+            break
+        }
+    }
+
+    private func setupBackgroundAudio() {
+        // Create a silent audio file for background keep-alive
+        // We'll generate a very quiet tone that keeps the audio session active
+        guard let silentURL = createSilentAudioFile() else { return }
+
+        do {
+            silentAudioPlayer = try AVAudioPlayer(contentsOf: silentURL)
+            silentAudioPlayer?.numberOfLoops = -1 // Loop indefinitely
+            silentAudioPlayer?.volume = 0.01 // Nearly silent
+            silentAudioPlayer?.prepareToPlay()
+        } catch {
+            print("Failed to setup background audio: \(error)")
+        }
+    }
+
+    private func createSilentAudioFile() -> URL? {
+        // Use a sound file from the bundle as the "silent" background track
+        // Play it at very low volume
+        if let url = Bundle.main.url(forResource: "Sounds/default/ow1", withExtension: "m4a") {
+            return url
+        }
+        return nil
+    }
+
+    func startBackgroundMode() {
+        guard settings.backgroundModeEnabled else { return }
+        isBackgroundModeActive = true
+        silentAudioPlayer?.play()
+    }
+
+    func stopBackgroundMode() {
+        isBackgroundModeActive = false
+        silentAudioPlayer?.pause()
     }
 
     func playReaction(for impact: ImpactEvent) {

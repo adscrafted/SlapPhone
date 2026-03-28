@@ -10,6 +10,7 @@ class Settings: ObservableObject {
     @AppStorage("shakeDetectionEnabled") var shakeDetectionEnabled: Bool = true
     @AppStorage("usbMoanerEnabled") var usbMoanerEnabled: Bool = true
     @AppStorage("hapticFeedbackEnabled") var hapticFeedbackEnabled: Bool = true
+    @AppStorage("backgroundModeEnabled") var backgroundModeEnabled: Bool = true
 
     // Sensitivity (1-10 scale, maps to g-force threshold)
     @AppStorage("sensitivityLevel") var sensitivityLevel: Double = 5.0
