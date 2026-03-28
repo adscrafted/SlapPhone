@@ -52,6 +52,7 @@
 		/* Resources */
 		AA0080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0080; };
 		AA0083 /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0083; };
+		AA0090 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FA0090; };
 		AA0084 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = GR0061; };
 
 		/* UI Tests */
@@ -110,6 +111,7 @@
 		FA0081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0082 /* SlapPhone.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SlapPhone.storekit; sourceTree = "<group>"; };
 		FA0083 /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bangers-Regular.ttf"; sourceTree = "<group>"; };
+		FA0090 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 
 		/* UI Tests */
 		FP0002 /* SlapPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +331,7 @@
 			children = (
 				FA0080 /* Assets.xcassets */,
 				FA0081 /* Info.plist */,
+				FA0090 /* PrivacyInfo.xcprivacy */,
 				FA0082 /* SlapPhone.storekit */,
 				GR0061 /* Sounds */,
 				GR0062 /* Fonts */,
@@ -451,6 +454,7 @@
 			files = (
 				AA0080 /* Assets.xcassets in Resources */,
 				AA0083 /* Bangers-Regular.ttf in Resources */,
+				AA0090 /* PrivacyInfo.xcprivacy in Resources */,
 				AA0084 /* Sounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,7 +639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 4BLK4KNLW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -666,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 4BLK4KNLW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -695,7 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 4BLK4KNLW2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -712,7 +716,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 4BLK4KNLW2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
